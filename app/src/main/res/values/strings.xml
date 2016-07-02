@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Infoapp</string>
+    <string name="str_SearchForCountry">Search for a country...</string>
+    <string name="str_popup">View statistics for Net Migration, Interest Rate, and Money Growth for countries by selecting a country from the list on the left. You can view how each statistic impacts the other over time by using the Year slider</string>
+    <string name="str_listEmpty">No Countries</string>
+    <string name="no_connection_loading_cache">No Connection, Loading Data From Cache...</string>
+    <string name="unable_to_connect">You need a network connection to use this application for the first time.
+        Please turn on mobile network or Wi-Fi in Settings.</string>
+    <string name="str_year">Year:</string>
+    <string name="str_dscMarker">marker</string>
+    <string name="str_dscMap">map</string>
+</resources>

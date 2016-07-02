@@ -1,0 +1,205 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:baselineAligned="false"
+    android:background="#ffffff"
+    android:id="@+id/top">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:baselineAligned="false">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:focusable="true"
+            android:focusableInTouchMode="true">
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtCountrySearch"
+                android:layout_gravity="left|top"
+                android:hint="@string/str_SearchForCountry"
+                android:textSize="15sp"
+                android:padding="5dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:textIsSelectable="false"
+                android:imeOptions="flagNoExtractUi"
+                android:layout_marginBottom="2dp"
+                android:background="#0e4c6c"
+                android:textColorHint="#ffffff"
+                android:textColor="#ffffff" />
+
+            <ListView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:id="@+id/listCountries"
+                android:textFilterEnabled="true"
+                android:smoothScrollbar="true"
+                android:layout_below="@+id/txtCountrySearch"
+                android:background="#0e4c6c" />
+
+            <TextView
+                android:id="@android:id/empty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/str_listEmpty"
+                android:gravity="center"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:textColor="#ffffff"
+                android:textSize="30sp" />
+
+        </RelativeLayout>
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="0.35"
+            android:background="#0e4c6c"
+            android:layout_marginLeft="2dp">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:id="@+id/rightSide"
+                android:layout_gravity="center">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:baselineAligned="false">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:id="@+id/panelOne"
+                        android:layout_margin="10dp">
+
+                    </FrameLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/linearLayout">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="150dp"
+                                android:id="@+id/mapView"
+                                android:layout_gravity="right|top"
+                                android:src="@drawable/a_mapsections"
+                                android:contentDescription="@string/str_dscMap"
+                                android:padding="10dp" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/str_year"
+                            android:id="@+id/dateText"
+                            android:textSize="30sp"
+                            android:textColor="#ffffff"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_below="@+id/linearLayout"
+                            android:layout_centerHorizontal="true" />
+
+                        <SeekBar
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/dateBar"
+                            android:progress="0"
+                            android:layout_below="@+id/dateText"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:id="@+id/panelTwo"
+                        android:layout_margin="10dp">
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:id="@+id/panelThree"
+                        android:layout_margin="10dp">
+
+                    </FrameLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/pin"
+        android:src="@drawable/mapmarker"
+        android:contentDescription="@string/str_dscMarker"
+        android:visibility="gone"
+        android:animateLayoutChanges="true" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:id="@+id/popUp"
+        android:layout_height="150dp"
+        android:gravity="center"
+        android:background="#000000"
+        android:alpha="0.75"
+        android:layout_gravity="top|center_horizontal"
+        android:visibility="gone">
+
+        <TextView
+            android:textSize="25sp"
+            android:text="@string/str_popup"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+            android:layout_width="wrap_content"
+            android:gravity="center"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+            android:id="@+id/popupText">
+        </TextView>
+
+    </LinearLayout>
+
+</FrameLayout>

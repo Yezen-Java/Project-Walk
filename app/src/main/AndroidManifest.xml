@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.zaffre.infoapp">
+    <uses-permission android:name="android.permission.INTERNET"/>
+    +    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <supports-screens
+        android:largeScreens="true"
+        android:normalScreens="false"
+        android:requiresSmallestWidthDp="600"
+        android:smallScreens="false"
+        android:xlargeScreens="true" />
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/gb"
+        android:label="@string/app_name"
+        android:screenOrientation="landscape"
+        android:theme="@android:style/Theme.DeviceDefault.Light.NoActionBar.Fullscreen" >
+        <activity
+            android:name=".frontend.activities.MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.DeviceDefault.Light.NoActionBar.Fullscreen" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
