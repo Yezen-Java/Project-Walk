@@ -4,7 +4,7 @@ Project Walk Infographics APP
 ----------
 
 
-![alt tag](http://yezenalnafei.herokuapp.com/img/portfolio/fullsize/6.jpg)
+![alt tag](https://firebasestorage.googleapis.com/v0/b/filesstorage-27b4c.appspot.com/o/6.png?alt=media&token=05baa91c-79e0-4053-b957-fd45bbdbfad2)
 
 ----------
 
